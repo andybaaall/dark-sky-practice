@@ -1,0 +1,29 @@
+{
+  "name": "dark-sky-practice",
+  "version": "1.0.0",
+  "description": "practicing using the dark-sky API",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andybaaall/dark-sky-practice.git"
+  },
+  "keywords": [
+    "api",
+    "ajax",
+    "json",
+    "jquery",
+    "js"
+  ],
+  "author": "andy ball",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andybaaall/dark-sky-practice/issues"
+  },
+  "homepage": "https://github.com/andybaaall/dark-sky-practice#readme",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
