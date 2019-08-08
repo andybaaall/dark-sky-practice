@@ -1,8 +1,9 @@
 $(document).ready(function(){
-  // console.log('hello world');
+
 
   // config file request
   let darkSkyKey;
+  let googleKey;
 
   $.ajax({
     url: 'config.json',
@@ -10,7 +11,7 @@ $(document).ready(function(){
     dataType: 'json',
     success: function(keys){
       darkSkyKey = keys['darkSkyKey'];
-      getWeatherData();
+      googleKey = keys['googleKey'];
     },
     error: function(){
       console.log('can\'t find config.json');
@@ -20,10 +21,11 @@ $(document).ready(function(){
   // API request
   getWeatherData = () => {
     $.ajax({
-      url: `https://api.darksky.net/forecast/${darkSkyKey}/-41.2865,174.7762`,
+      url: `https://api.darksky.net/forecast/${darkSkyKey}/${latitude},${longitude}`,
       type: 'GET',
       dataType: 'jsonp',
       success: function(data){
+        console.log('hello world');
         console.log(data);
       },
       error: function() {
@@ -31,6 +33,8 @@ $(document).ready(function(){
       }
     })
   }
+
+
 
   // let's use the google places autocomplete API!
   // let's maybe just grab the code off the class github repo ?

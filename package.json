@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/andybaaall/dark-sky-practice#readme",
   "dependencies": {
-    "jquery": "^3.4.1"
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
   }
 }

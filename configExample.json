@@ -1,3 +1,4 @@
   {
-    "darkSkyKey" : "YOUR_API_KEY_HERE"
+    "darkSkyKey" : "YOUR_API_KEY_HERE",
+    "googleKey" : "YOUR_API_KEY_HERE"
   }
