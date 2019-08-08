@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  console.log('hello world');
 
   // config file request
   let darkSkyKey;
@@ -25,7 +26,6 @@ $(document).ready(function(){
       type: 'GET',
       dataType: 'jsonp',
       success: function(data){
-        console.log('hello world');
         console.log(data);
       },
       error: function() {
