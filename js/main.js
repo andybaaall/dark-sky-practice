@@ -1,8 +1,12 @@
 $(document).ready(function(){
   // console.log('hello world');
 
+  let latitude;
+  let longitude;
+
   // config file request
   let darkSkyKey;
+  let googleKey;
 
   $.ajax({
     url: 'config.json',
@@ -10,17 +14,17 @@ $(document).ready(function(){
     dataType: 'json',
     success: function(keys){
       darkSkyKey = keys['darkSkyKey'];
-      getWeatherData();
+      googleKey = keys['googleKey'];
     },
     error: function(){
       console.log('can\'t find config.json');
     }
   });
 
-  // API request
+  // Dark Sky API request
   getWeatherData = () => {
     $.ajax({
-      url: `https://api.darksky.net/forecast/${darkSkyKey}/-41.2865,174.7762`,
+      url: `https://api.darksky.net/forecast/${darkSkyKey}/${latitude},${longitude}`,
       type: 'GET',
       dataType: 'jsonp',
       success: function(data){
@@ -30,6 +34,11 @@ $(document).ready(function(){
         console.log('something bad happened');
       }
     })
+  }
+
+  // places autocomplete request
+  getLatLng = () => {
+    
   }
 
   // let's use the google places autocomplete API!
